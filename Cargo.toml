@@ -1,0 +1,13 @@
+[package]
+name = "spacebar-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winapi = { version = "0.3", features = ["winuser"] }
+tokio = { version = "1.16", features = ["full"] }
+warp = "0.3"
+simple_logger = "2.1"
+log = "0.4"

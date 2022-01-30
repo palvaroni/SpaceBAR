@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SpaceBAR</title>
+</head>
+
+<body>
+    <div style="margin: 20vh auto; text-align: center;">
+        <button id="button" style="width:95%; min-height:100px">Spacebar</button>
+        <p id="output"></p>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('button').addEventListener('click', function () {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                    document.getElementById('output').innerHTML = 'Success!';
+
+                    setTimeout(function () {
+                        document.getElementById('output').innerHTML = '';
+                    }, 2000);
+                }
+            };
+
+            xhttp.open("POST", "trigger", true);
+            xhttp.send();
+        });
+    </script>
+</body>
+
+</html>
